@@ -1,26 +1,3 @@
-
-
-
-//Opgave 1: brug javascript til at oprette en ny array med alle ansatte over 30 år  log resultatet til konsollen som table
-
-
-
-
-
-
-//Opgave 2: brug javascript til at oprette en ny array med alle ansatte under 20 år  log resultatet til konsollen som table
-
-
-
-
-//Opgave 3: brug javascript til at oprette en ny array med alle kvindelige ansatte over 30 år  log resultatet til konsollen som table
-
-
-
-
-//Opgave 4: brug javascript til at oprette en ny array med alle ikke-binære ansatte over 20 år  log resultatet til konsollen som table
-
-
 // data array
 
 const myEmployees=[
@@ -78,5 +55,34 @@ const myEmployees=[
     { navn: 'Zenia', alder: 29, køn: 'Kvinde' }
   ]
 
-  // må gerne slettes
-  console.table(myEmployees);
+
+
+
+//Opgave 1: brug javascript til at oprette en ny array med alle ansatte over 30 år  log resultatet til konsollen som table
+const ansatteOver30 = myEmployees.filter(ansat => ansat.alder > 30);
+
+
+console.table(ansatteOver30);
+
+
+
+
+
+//Opgave 2: brug javascript til at oprette en ny array med alle ansatte under 20 år  log resultatet til konsollen som table
+const ansatteUnder20 = myEmployees.filter(ansat => ansat.alder < 20);
+
+console.table(ansatteUnder20);
+
+
+
+//Opgave 3: brug javascript til at oprette en ny array med alle kvindelige ansatte over 30 år  log resultatet til konsollen som table
+const kvindeligeAnsatteOver30 = myEmployees.filter(ansat => ansat.køn === 'Kvinde' && ansat.alder > 30);
+
+console.table(kvindeligeAnsatteOver30);
+
+
+
+//Opgave 4: brug javascript til at oprette en ny array med alle ikke-binære ansatte over 20 år  log resultatet til konsollen som table
+const ikkeBinaereAnsatteOver20 = myEmployees.filter(ansat => ansat.køn === 'Ikke-binær' && ansat.alder > 20);
+
+console.table(ikkeBinaereAnsatteOver20);
